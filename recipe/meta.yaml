@@ -7,7 +7,7 @@ source:
     git_tag: master
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win or py3k]
 
 requirements:
@@ -19,15 +19,15 @@ requirements:
         - jpeg
         - zlib
         - hdf4
-        - hdf5
+        - hdf5 1.8.15.1
         - libnetcdf
         - proj.4
-        - gdal
+        - gdal 1.11.4
         - curl
         - libiconv
         - g2clib
         - hdfeos2
-        - hdfeos5
+        - hdfeos5 5.1.15 0
         - gcc
     run:
         - python
@@ -37,17 +37,17 @@ requirements:
         - jpeg
         - zlib
         - libnetcdf
-        - hdf5
         - hdf4
+        - hdf5 1.8.15.1
         - proj.4
-        - gdal
+        - gdal 1.11.4
         - curl
         - libiconv
         - g2clib
         - hdfeos2
-        - hdfeos5
-        - libgcc
+        - hdfeos5  5.1.15 0
         - krb5
+        - libgcc
 
 test:
     requires:
@@ -56,6 +56,7 @@ test:
         - Nio
     commands:
         - cd $SRC_DIR/test && nosetests
+        - conda inspect linkages -n _test pynio  # [linux]
 
 about:
     home: http://www.pyngl.ucar.edu/Nio.shtml

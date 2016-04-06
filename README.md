@@ -73,6 +73,11 @@ Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pynio-feedstock.svg?sty
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pynio-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pynio-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pynio-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pynio-feedstock/branch/master)
 
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pynio/badges/version.svg)](https://anaconda.org/conda-forge/pynio)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pynio/badges/downloads.svg)](https://anaconda.org/conda-forge/pynio)
+
 
 Updating pynio-feedstock
 ========================
