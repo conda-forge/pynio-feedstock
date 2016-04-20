@@ -7,46 +7,30 @@ source:
     git_tag: master
 
 build:
-    number: 2
+    number: 3
     skip: True  # [win or py3k]
 
 requirements:
     build:
         - python
         - numpy x.x
-        - libpng
-        - jasper
-        - jpeg
-        - zlib
-        - hdf4
-        - hdf5 1.8.15.1
         - libnetcdf
         - proj.4
         - gdal 1.11.4
-        - curl
-        - libiconv
         - g2clib
         - hdfeos2
-        - hdfeos5 5.1.15 0
+        - hdfeos5
         - gcc
     run:
         - python
         - numpy x.x
-        - libpng
-        - jasper
-        - jpeg
-        - zlib
         - libnetcdf
         - hdf4
-        - hdf5 1.8.15.1
         - proj.4
         - gdal 1.11.4
-        - curl
-        - libiconv
         - g2clib
         - hdfeos2
-        - hdfeos5  5.1.15 0
-        - krb5
+        - hdfeos5
         - libgcc
 
 test:
