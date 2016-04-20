@@ -5,7 +5,7 @@ Home: http://www.pyngl.ucar.edu/Nio.shtml
 
 Package license: BSD-3-clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: PyNIO is a multi-format data I/O package with a NetCDF-style interface
 
