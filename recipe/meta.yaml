@@ -7,7 +7,7 @@ source:
     git_tag: master
 
 build:
-    number: 3
+    number: 4
     skip: True  # [win or py3k]
 
 requirements:
