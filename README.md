@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pynio-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pynio-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pynio-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pynio-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pynio-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pynio-feedstock/branch/master)
