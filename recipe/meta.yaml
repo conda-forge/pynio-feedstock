@@ -7,14 +7,14 @@ source:
     git_tag: master
 
 build:
-    number: 5
+    number: 6
     skip: True  # [win or py3k]
 
 requirements:
     build:
         - python
         - numpy x.x
-        - libnetcdf
+        - libnetcdf 4.4*
         - proj.4
         - gdal 1.11.4
         - g2clib
@@ -24,7 +24,7 @@ requirements:
     run:
         - python
         - numpy x.x
-        - libnetcdf
+        - libnetcdf 4.4*
         - hdf4
         - proj.4
         - gdal 1.11.4
