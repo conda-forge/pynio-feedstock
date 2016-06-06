@@ -1,20 +1,24 @@
+{% set version = "1.5.0beta" %}
+{% set commit = "0f6c6896997a56c4c69ad3b3ce01060eab4d7576" %}
+
 package:
     name: pynio
-    version: 1.5.0beta
+    version: {{ version }}
 
 source:
-    git_url: https://github.com/NCAR/pynio.git
-    git_tag: master
+    fn: {{ commit }}.tar.gz
+    url: https://github.com/NCAR/pynio/archive/{{ commit }}.tar.gz
+    sha256: becd7ce9f5c8ccb98d5b0ae538ee0cd051eb9d89d918628183fe5c5038a0ec12
 
 build:
-    number: 5
+    number: 6
     skip: True  # [win or py3k]
 
 requirements:
     build:
         - python
         - numpy x.x
-        - libnetcdf
+        - libnetcdf 4.4.*
         - proj.4
         - gdal 1.11.4
         - g2clib
@@ -24,7 +28,7 @@ requirements:
     run:
         - python
         - numpy x.x
-        - libnetcdf
+        - libnetcdf 4.4.*
         - hdf4
         - proj.4
         - gdal 1.11.4
