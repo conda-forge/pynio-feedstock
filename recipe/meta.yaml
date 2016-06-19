@@ -1,17 +1,17 @@
 {% set version = "1.5.0beta" %}
-{% set commit = "0f6c6896997a56c4c69ad3b3ce01060eab4d7576" %}
+{% set commit = "d6515e3dbda62deec7a3df949daf5755f88b5431" %}
 
 package:
     name: pynio
     version: {{ version }}
 
 source:
-    fn: {{ commit }}.tar.gz
+    fn: pynio-{{ version }}-{{ commit }}.tar.gz
     url: https://github.com/NCAR/pynio/archive/{{ commit }}.tar.gz
-    sha256: becd7ce9f5c8ccb98d5b0ae538ee0cd051eb9d89d918628183fe5c5038a0ec12
+    sha256: 5ca3375b9f6984113c022275a098e648795d40b4a5181915e92807d6a25b6d25
 
 build:
-    number: 6
+    number: 7
     skip: True  # [win or py3k]
 
 requirements:
@@ -20,22 +20,24 @@ requirements:
         - numpy x.x
         - libnetcdf 4.4.*
         - proj.4
-        - gdal 1.11.4
+        - gdal >=2.*
         - g2clib
         - hdfeos2
         - hdfeos5
         - gcc
+        - isl 0.12.*
     run:
         - python
         - numpy x.x
         - libnetcdf 4.4.*
         - hdf4
         - proj.4
-        - gdal 1.11.4
+        - gdal >=2.*
         - g2clib
         - hdfeos2
         - hdfeos5
         - libgcc
+        - isl 0.12.*
 
 test:
     requires:
