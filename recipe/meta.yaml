@@ -24,6 +24,7 @@ requirements:
         - g2clib
         - hdfeos2
         - hdfeos5
+        - jasper
         - gcc
         - isl 0.12.*
     run:
@@ -36,6 +37,7 @@ requirements:
         - g2clib
         - hdfeos2
         - hdfeos5
+        - jasper
         - libgcc
         - isl 0.12.*
 
