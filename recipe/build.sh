@@ -18,6 +18,11 @@ export CPPFLAGS="-I$PREFIX/include $CPPFLAGS"
 export CFLAGS="-D_BSD_SOURCE -D_XOPEN_SOURCE -I$PREFIX/include $CFLAGS"
 
 if [[ $(uname) == Darwin ]]; then
+  export CC=clang
+  export CXX=clang++
+  export MACOSX_DEPLOYMENT_TARGET="10.9"
+  export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
+  export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
   export LDFLAGS="-headerpad_max_install_names $LDFLAGS"
 fi
 
