@@ -48,8 +48,8 @@ test:
         - Nio
     commands:
         - cd $SRC_DIR/test && nosetests
-        - conda inspect linkages -n _test pynio  # [not win]
-        - conda inspect objects -n _test pynio  # [osx]
+        #- conda inspect linkages -p $PREFIX pynio  # [not win]
+        #- conda inspect objects -p $PREFIX pynio  # [osx]
 
 about:
     home: http://www.pyngl.ucar.edu/Nio.shtml
