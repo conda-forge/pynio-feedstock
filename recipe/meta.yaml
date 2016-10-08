@@ -12,7 +12,7 @@ source:
     sha256: 43411c577e21335d4684f384cbf117b41202f55b49198d1c688fc65703dbff68
 
 build:
-    number: 10
+    number: 11
     skip: True  # [win or py3k]
     detect_binary_files_with_prefix: true
 
@@ -22,7 +22,7 @@ requirements:
         - gcc
         - numpy x.x
         - libnetcdf 4.4.*
-        - proj.4
+        - proj.4 4.9.3
         - gdal 1.11.*
         - g2clib 1.6.*
         - hdfeos2
@@ -33,7 +33,7 @@ requirements:
         - numpy x.x
         - libnetcdf 4.4.*
         - hdf4
-        - proj.4
+        - proj.4 4.9.3
         - gdal 1.11.*
         - g2clib 1.6.*
         - hdfeos2
@@ -48,8 +48,8 @@ test:
         - Nio
     commands:
         - cd $SRC_DIR/test && nosetests
-        - conda inspect linkages -n _test pynio  # [not win]
-        - conda inspect objects -n _test pynio  # [osx]
+        #- conda inspect linkages -p $PREFIX pynio  # [not win]
+        #- conda inspect objects -p $PREFIX pynio  # [osx]
 
 about:
     home: http://www.pyngl.ucar.edu/Nio.shtml
