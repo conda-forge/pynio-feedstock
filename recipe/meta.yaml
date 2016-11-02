@@ -28,6 +28,8 @@ requirements:
     - hdfeos2
     - hdfeos5
     - jasper
+    - util-linux  # [linux]
+    - libuuid  # [osx]
   run:
     - python
     - numpy x.x
@@ -40,6 +42,8 @@ requirements:
     - hdfeos5
     - jasper
     - libgfortran
+    - util-linux  # [linux]
+    - libuuid  # [osx]
 
 test:
   requires:
