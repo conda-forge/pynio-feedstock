@@ -3,63 +3,63 @@
 {% set version = ver + "_" + beta %}
 
 package:
-    name: pynio
-    version: {{ version }}
+  name: pynio
+  version: {{ version }}
 
 source:
-    fn: pynio-{{ version }}.tar.gz
-    url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
-    sha256: 43411c577e21335d4684f384cbf117b41202f55b49198d1c688fc65703dbff68
+  fn: pynio-{{ version }}.tar.gz
+  url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
+  sha256: 43411c577e21335d4684f384cbf117b41202f55b49198d1c688fc65703dbff68
 
 build:
-    number: 11
-    skip: True  # [win or py3k]
-    detect_binary_files_with_prefix: true
+  number: 12
+  skip: True  # [win or py3k]
+  detect_binary_files_with_prefix: true
 
 requirements:
-    build:
-        - python
-        - gcc
-        - numpy x.x
-        - libnetcdf 4.4.*
-        - proj.4 4.9.3
-        - gdal 1.11.*
-        - g2clib 1.6.*
-        - hdfeos2
-        - hdfeos5
-        - jasper
-    run:
-        - python
-        - numpy x.x
-        - libnetcdf 4.4.*
-        - hdf4
-        - proj.4 4.9.3
-        - gdal 1.11.*
-        - g2clib 1.6.*
-        - hdfeos2
-        - hdfeos5
-        - jasper
-        - libgfortran
+  build:
+    - python
+    - gcc
+    - numpy x.x
+    - libnetcdf 4.4.*
+    - proj4 4.9.3
+    - gdal 1.11.*
+    - g2clib 1.6.*
+    - hdfeos2
+    - hdfeos5
+    - jasper
+  run:
+    - python
+    - numpy x.x
+    - libnetcdf 4.4.*
+    - hdf4
+    - proj4 4.9.3
+    - gdal 1.11.*
+    - g2clib 1.6.*
+    - hdfeos2
+    - hdfeos5
+    - jasper
+    - libgfortran
 
 test:
-    requires:
-        - nose
-    imports:
-        - Nio
-    commands:
-        - cd $SRC_DIR/test && nosetests
-        #- conda inspect linkages -p $PREFIX pynio  # [not win]
-        #- conda inspect objects -p $PREFIX pynio  # [osx]
+  requires:
+    - nose
+  imports:
+    - Nio
+  commands:
+    - cd $SRC_DIR/test && nosetests
+    #- conda inspect linkages -p $PREFIX pynio  # [not win]
+    #- conda inspect objects -p $PREFIX pynio  # [osx]
 
 about:
-    home: http://www.pyngl.ucar.edu/Nio.shtml
-    license: BSD 3-clause
-    summary: 'PyNIO is a multi-format data I/O package with a NetCDF-style interface.'
+  home: http://www.pyngl.ucar.edu/Nio.shtml
+  license: BSD 3-clause
+  summary: 'PyNIO is a multi-format data I/O package with a NetCDF-style interface.'
 
 extra:
-    recipe-maintainers:
-        - marylhaley
-        - ocefpaf
-        - jhamman
-        - david-ian-brown
-        - khallock
+  recipe-maintainers:
+    - marylhaley
+    - ocefpaf
+    - jhamman
+    - david-ian-brown
+    - khallock
