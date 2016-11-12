@@ -10,6 +10,8 @@ source:
   fn: pynio-{{ version }}.tar.gz
   url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
   sha256: 43411c577e21335d4684f384cbf117b41202f55b49198d1c688fc65703dbff68
+  patches:
+    - test_opendap2_url.patch
 
 build:
   number: 13
