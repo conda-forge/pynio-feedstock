@@ -14,7 +14,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 13
+  number: 14
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -54,8 +54,8 @@ test:
     - Nio
   commands:
     - cd $SRC_DIR/test && nosetests
-    #- conda inspect linkages -p $PREFIX pynio  # [not win]
-    #- conda inspect objects -p $PREFIX pynio  # [osx]
+    - conda inspect linkages -p $PREFIX pynio  # [not win]
+    - conda inspect objects -p $PREFIX pynio  # [osx]
 
 about:
   home: http://www.pyngl.ucar.edu/Nio.shtml
