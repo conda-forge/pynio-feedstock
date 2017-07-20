@@ -14,7 +14,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 15
+  number: 16
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -22,10 +22,10 @@ requirements:
   build:
     - python
     - gcc
-    - numpy x.x
+    - numpy 1.7.*  # [py27]
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - gdal 2.2.*
+    - libgdal 2.1.*
     - g2clib 1.6.*
     - hdfeos2
     - hdfeos5
@@ -34,11 +34,11 @@ requirements:
     - libuuid  # [osx]
   run:
     - python
-    - numpy x.x
+    - numpy >=1.7  # [py27]
     - libnetcdf 4.4.*
     - hdf4
     - proj4 4.9.3
-    - gdal 2.2.*
+    - libgdal 2.1.*
     - g2clib 1.6.*
     - hdfeos2
     - hdfeos5
@@ -53,7 +53,7 @@ test:
   imports:
     - Nio
   commands:
-    - cd $SRC_DIR/test && nosetests
+    - cd $SRC_DIR/test && nosetests  # [not win]
     - conda inspect linkages -p $PREFIX pynio  # [not win]
     - conda inspect objects -p $PREFIX pynio  # [osx]
 
