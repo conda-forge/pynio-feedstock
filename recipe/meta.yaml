@@ -1,6 +1,4 @@
-{% set ver = "1.5.0" %}
-{% set beta = "beta20160623" %}
-{% set version = ver + "_" + beta %}
+{% set version = "1.5.0" %}
 
 package:
   name: pynio
@@ -9,12 +7,12 @@ package:
 source:
   fn: pynio-{{ version }}.tar.gz
   url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
-  sha256: 43411c577e21335d4684f384cbf117b41202f55b49198d1c688fc65703dbff68
+  sha256: 8e57961cb568eaf1b596d2210bedd43d70b8a2c03dc338a35e135a0d60f9344d
   patches:
     - test_opendap2_url.patch
 
 build:
-  number: 16
+  number: 0
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
