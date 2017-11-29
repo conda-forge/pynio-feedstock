@@ -5,14 +5,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: pynio-{{ version }}.tar.gz
   url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
   sha256: e2bae6469541662835a7d13aa0185b73b13df56c2de6ce6f8e74cb17ba9a6143
   patches:
     - test_opendap2_url.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -23,10 +22,10 @@ requirements:
     - numpy 1.7.*  # [py27]
     - libnetcdf 4.4.*
     - proj4 4.9.3
-    - libgdal 2.1.*
+    - libgdal 2.2.*
     - g2clib 1.6.*
     - hdfeos2
-    - hdfeos5
+    # - hdfeos5
     - jasper
     - util-linux  # [linux]
     - libuuid  # [osx]
@@ -36,10 +35,10 @@ requirements:
     - libnetcdf 4.4.*
     - hdf4
     - proj4 4.9.3
-    - libgdal 2.1.*
+    - libgdal 2.2.*
     - g2clib 1.6.*
     - hdfeos2
-    - hdfeos5
+    # - hdfeos5
     - jasper
     - libgfortran
     - util-linux  # [linux]
