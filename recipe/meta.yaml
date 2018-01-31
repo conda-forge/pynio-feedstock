@@ -11,7 +11,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win or py3k]
   detect_binary_files_with_prefix: true
 
@@ -20,29 +20,32 @@ requirements:
     - python
     - gcc
     - numpy 1.7.*  # [py27]
-    - libnetcdf 4.4.*
-    - proj4 4.9.3
-    - libgdal 2.2.*
     - g2clib 1.6.*
+    - hdf4
+    - hdf5 1.10.1
     - hdfeos2
     # - hdfeos5
     - jasper
-    - util-linux  # [linux]
+    - libgdal 2.2.*
+    - libnetcdf 4.4.*
     - libuuid  # [osx]
+    - proj4 4.9.3
+    - util-linux  # [linux]
   run:
     - python
     - numpy >=1.7  # [py27]
-    - libnetcdf 4.4.*
-    - hdf4
-    - proj4 4.9.3
-    - libgdal 2.2.*
     - g2clib 1.6.*
+    - hdf4
+    - hdf5 1.10.1
     - hdfeos2
     # - hdfeos5
     - jasper
+    - libgdal 2.2.*
+    - libnetcdf 4.4.*
     - libgfortran
-    - util-linux  # [linux]
     - libuuid  # [osx]
+    - proj4 4.9.3
+    - util-linux  # [linux]
 
 test:
   requires:
