@@ -48,6 +48,9 @@ requirements:
     - util-linux  # [linux]
 
 test:
+  source_files:
+    - test
+    - ncarg
   requires:
     - nose
   imports:
