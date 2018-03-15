@@ -1,4 +1,4 @@
-{% set version = "1.5.1.dev0+" + GIT_FULL_HASH[0:7] %}
+{% set version = "1.5.1.dev0" %}
 {% set commit_id = "05806a26a8676fea5832c0f270609e20df1d7276" %}
 
 package:
