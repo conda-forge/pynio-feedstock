@@ -1,4 +1,7 @@
 #!/bin/sh
+PYNIO_VERSION="${PKG_VERSION}+${GIT_FULL_HASH:0:7}"
+
+echo $PYNIO_VERSION > version
 
 export HAS_NETCDF4=1
 export HAS_HDFEOS=1
