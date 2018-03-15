@@ -12,7 +12,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
