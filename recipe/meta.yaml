@@ -12,7 +12,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -57,6 +57,7 @@ test:
   imports:
     - Nio
   commands:
+    - test "$(echo "import Nio; print(Nio.__version__)" | python)" = "{{ version }}+{{ GIT_FULL_HASH[0:7] }}"
     - cd $SRC_DIR/test && nosetests  # [not win]
     - conda inspect linkages -p $PREFIX pynio  # [not win]
     - conda inspect objects -p $PREFIX pynio  # [osx]
