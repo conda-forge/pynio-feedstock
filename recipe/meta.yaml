@@ -1,5 +1,5 @@
-{% set version = "1.5.1.dev0" %}
-{% set commit_id = "05806a26a8676fea5832c0f270609e20df1d7276" %}
+{% set version = "1.5.1.dev1" %}
+{% set commit_id = "a220065076043e283b73df3a7a0e1a5e448614cb" %}
 
 package:
   name: pynio
@@ -12,7 +12,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
