@@ -12,7 +12,7 @@ source:
     - test_opendap2_url.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -28,7 +28,7 @@ requirements:
     - hdfeos5
     - jasper
     - libgdal 2.2.*
-    - libnetcdf 4.4.*
+    - libnetcdf 4.5.*
     - libuuid  # [osx]
     - proj4 4.9.3
     - util-linux  # [linux]
@@ -42,7 +42,7 @@ requirements:
     - hdfeos5
     - jasper
     - libgdal 2.2.*
-    - libnetcdf 4.4.*
+    - libnetcdf >=4.5
     - libgfortran
     - libuuid  # [osx]
     - proj4 4.9.3
@@ -59,12 +59,13 @@ test:
   commands:
     - test "$(echo "import Nio; print(Nio.__version__)" | python)" = "{{ version }}+{{ GIT_FULL_HASH[0:7] }}"
     - cd $SRC_DIR/test && nosetests  # [not win]
-    - conda inspect linkages -p $PREFIX pynio  # [not win]
-    - conda inspect objects -p $PREFIX pynio  # [osx]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.pyngl.ucar.edu/Nio.shtml
   license: BSD 3-clause
+  license_file: LICENSE
   summary: 'PyNIO is a multi-format data I/O package with a NetCDF-style interface.'
 
 extra:
