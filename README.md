@@ -14,14 +14,16 @@ Summary: PyNIO is a multi-format data I/O package with a NetCDF-style interface.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pynio-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pynio-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pynio-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pynio-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pynio-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pynio-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pynio-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pynio-feedstock)
+![Windows disabled](https://img.shields.io/badge/Windows-disabled-lightgrey.svg)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pynio/badges/version.svg)](https://anaconda.org/conda-forge/pynio)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pynio/badges/downloads.svg)](https://anaconda.org/conda-forge/pynio)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pynio-green.svg)](https://anaconda.org/conda-forge/pynio) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pynio.svg)](https://anaconda.org/conda-forge/pynio) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pynio.svg)](https://anaconda.org/conda-forge/pynio) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pynio.svg)](https://anaconda.org/conda-forge/pynio) |
 
 Installing pynio
 ================
