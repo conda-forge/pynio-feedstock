@@ -21,7 +21,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - numpy
+    - numpy 1.14.*
     - g2clib 1.6.*
     - hdf4
     - hdf5
@@ -35,7 +35,7 @@ requirements:
     - util-linux  # [linux]
   run:
     - python
-    - {{ pin_compatible('numpy') }}
+    - numpy >=1.14
     - g2clib 1.6.*
     - hdf4
     - hdf5
