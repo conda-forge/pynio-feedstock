@@ -1,0 +1,32 @@
+c_compiler:
+- toolchain_c
+fortran_compiler:
+- toolchain_fort
+hdf4:
+- '4.2'
+hdf5:
+- 1.10.2
+libgdal:
+- '2.2'
+libnetcdf:
+- '4.6'
+numpy:
+- '1.9'
+pin_run_as_build:
+  hdf4:
+    max_pin: x.x
+  hdf5:
+    max_pin: x.x.x
+  libgdal:
+    max_pin: x.x
+  libnetcdf:
+    max_pin: x.x
+  proj4:
+    max_pin: x.x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+proj4:
+- 4.9.3
+python:
+- '2.7'
