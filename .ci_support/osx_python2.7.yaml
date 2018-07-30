@@ -8,6 +8,8 @@ hdf4:
 - '4.2'
 hdf5:
 - 1.10.2
+jasper:
+- 1.900.1
 libgdal:
 - '2.2'
 libnetcdf:
@@ -16,13 +18,13 @@ macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
 - '10.9'
-numpy:
-- '1.9'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
   hdf5:
     max_pin: x.x.x
+  jasper:
+    max_pin: x
   libgdal:
     max_pin: x.x
   libnetcdf:
@@ -30,8 +32,8 @@ pin_run_as_build:
   proj4:
     max_pin: x.x.x
   python:
-    min_pin: x.x
     max_pin: x.x
+    min_pin: x.x
 proj4:
 - 4.9.3
 python:
