@@ -1,3 +1,5 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 c_compiler:
 - toolchain_c
 fortran_compiler:
@@ -12,6 +14,10 @@ libgdal:
 - '2.2'
 libnetcdf:
 - '4.6'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+macos_min_version:
+- '10.9'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
@@ -31,4 +37,4 @@ pin_run_as_build:
 proj4:
 - 4.9.3
 python:
-- '2.7'
+- '3.6'
