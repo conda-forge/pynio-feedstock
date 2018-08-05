@@ -9,7 +9,7 @@ source:
   sha256: 49f12433f1ec89d888190bc25364657fdfbae4e1444a5531173df09e859e217e
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -56,8 +56,6 @@ test:
     - Nio
   commands:
     - cd $SRC_DIR/test && nosetests  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.pyngl.ucar.edu/Nio.shtml

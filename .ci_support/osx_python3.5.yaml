@@ -14,6 +14,8 @@ libgdal:
 - '2.2'
 libnetcdf:
 - '4.6'
+libuuid:
+- 2.32.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 macos_min_version:
@@ -29,11 +31,13 @@ pin_run_as_build:
     max_pin: x.x
   libnetcdf:
     max_pin: x.x
+  libuuid:
+    max_pin: x
   proj4:
     max_pin: x.x.x
   python:
-    max_pin: x.x
     min_pin: x.x
+    max_pin: x.x
 proj4:
 - 4.9.3
 python:
