@@ -9,7 +9,7 @@ source:
   sha256: 49f12433f1ec89d888190bc25364657fdfbae4e1444a5531173df09e859e217e
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -30,7 +30,6 @@ requirements:
     - libnetcdf
     - libuuid  # [osx]
     - proj4
-    - util-linux  # [linux]
   run:
     - python
     - numpy >=1.14
@@ -44,7 +43,6 @@ requirements:
     - libnetcdf
     - libuuid  # [osx]
     - proj4
-    - util-linux  # [linux]
 
 test:
   source_files:
