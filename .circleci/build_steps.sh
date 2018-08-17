@@ -12,6 +12,7 @@ cat >~/.condarc <<CONDARC
 
 channels:
  - conda-forge
+ - defaults
 
 conda-build:
  root-dir: /home/conda/feedstock_root/build_artifacts
