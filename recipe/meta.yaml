@@ -1,4 +1,4 @@
-{% set version = "1.5.2" %}
+{% set version = "1.5.4" %}
 
 package:
   name: pynio
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
-  sha256: 14797aabf34b5539a01fa5e1b7019e7d02b60e806a756e7decf139d2f2e86412
+  sha256: e5bb57d902740d25e4781a9f89e888149f55f2ffe60f9a5ad71069f017c89e1a
 
 build:
   number: 0
