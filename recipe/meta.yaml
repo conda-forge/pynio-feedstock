@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
-  sha256: 70f4e4447b515524a44e119081b9b00a15ec0efb203d2fe58a8626e4458979e7
+  sha256: 045c8b2ee71f13f9b1164da6286b88e556a6519bc05485d4666bbab57d03caa0
 
 build:
   number: 0
