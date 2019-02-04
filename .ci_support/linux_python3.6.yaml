@@ -1,22 +1,26 @@
 c_compiler:
-- toolchain_c
+- gcc
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+docker_image:
+- condaforge/linux-anvil-comp7
 fortran_compiler:
-- toolchain_fort
+- gfortran
 hdf4:
 - '4.2'
 hdf5:
-- 1.10.2
+- 1.10.4
 jasper:
 - 1.900.1
 libgdal:
-- '2.2'
+- '2.4'
 libnetcdf:
 - '4.6'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
-  hdf5:
-    max_pin: x.x.x
   jasper:
     max_pin: x
   libgdal:
@@ -29,6 +33,6 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj4:
-- 4.9.3
+- 5.2.0
 python:
 - '3.6'
