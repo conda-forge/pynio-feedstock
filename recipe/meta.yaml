@@ -20,6 +20,7 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - python
+    - pip
     - numpy 1.14.*
     - g2clib 1.6.*
     - hdf4
