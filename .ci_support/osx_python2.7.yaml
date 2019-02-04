@@ -1,17 +1,25 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
 c_compiler:
-- toolchain_c
+- clang
+channel_sources:
+- conda-forge,defaults
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- clangxx
 fortran_compiler:
-- toolchain_fort
+- gfortran
+fortran_compiler_version:
+- '4'
 hdf4:
 - '4.2'
 hdf5:
-- 1.10.2
+- 1.10.4
 jasper:
 - 1.900.1
 libgdal:
-- '2.2'
+- '2.4'
 libnetcdf:
 - '4.6'
 libuuid:
@@ -23,8 +31,6 @@ macos_min_version:
 pin_run_as_build:
   hdf4:
     max_pin: x.x
-  hdf5:
-    max_pin: x.x.x
   jasper:
     max_pin: x
   libgdal:
@@ -39,6 +45,6 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj4:
-- 4.9.3
+- 5.2.0
 python:
 - '2.7'
