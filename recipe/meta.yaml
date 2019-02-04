@@ -1,4 +1,4 @@
-{% set version = "1.5.4" %}
+{% set version = "1.5.5" %}
 
 package:
   name: pynio
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/NCAR/pynio/archive/{{ version }}.tar.gz
-  sha256: e5bb57d902740d25e4781a9f89e888149f55f2ffe60f9a5ad71069f017c89e1a
+  sha256: 70f4e4447b515524a44e119081b9b00a15ec0efb203d2fe58a8626e4458979e7
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
@@ -51,11 +51,11 @@ test:
     - test
     - ncarg
   requires:
-    - nose
+    - pytest
   imports:
     - Nio
   commands:
-    - cd $SRC_DIR/test && nosetests  # [not win]
+    - cd $SRC_DIR/test && pytest  # [not win]
 
 about:
   home: http://www.pyngl.ucar.edu/Nio.shtml
