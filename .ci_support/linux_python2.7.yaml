@@ -23,7 +23,7 @@ hdf5:
 jasper:
 - 1.900.1
 libgdal:
-- '2.4'
+- '3.0'
 libnetcdf:
 - 4.6.2
 pin_run_as_build:
