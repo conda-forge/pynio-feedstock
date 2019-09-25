@@ -26,6 +26,8 @@ libgdal:
 - '3.0'
 libnetcdf:
 - 4.6.2
+numpy:
+- '1.14'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
@@ -35,12 +37,10 @@ pin_run_as_build:
     max_pin: x.x
   libnetcdf:
     max_pin: x.x.x
-  proj4:
-    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
-proj4:
-- 6.1.1
+proj:
+- 6.2.0
 python:
 - '2.7'
