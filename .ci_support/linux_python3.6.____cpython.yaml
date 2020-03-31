@@ -25,7 +25,7 @@ jasper:
 libgdal:
 - '3.0'
 libnetcdf:
-- 4.7.3
+- 4.7.4
 numpy:
 - '1.14'
 pin_run_as_build:
@@ -41,4 +41,4 @@ pin_run_as_build:
 proj:
 - 6.3.1
 python:
-- '3.6'
+- 3.6.* *_cpython
