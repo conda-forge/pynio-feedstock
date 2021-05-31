@@ -29,7 +29,7 @@ libgdal:
 libnetcdf:
 - 4.7.4
 numpy:
-- '1.16'
+- '1.17'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
@@ -41,9 +41,9 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 7.1.1
+- 7.2.0
 python:
-- 3.7.* *_cpython
+- 3.8.* *_cpython
 target_platform:
 - linux-64
 zip_keys:

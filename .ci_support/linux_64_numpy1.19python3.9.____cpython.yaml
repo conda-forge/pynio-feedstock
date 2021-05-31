@@ -1,17 +1,19 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 c_compiler:
-- clang
+- gcc
 c_compiler_version:
-- '11'
+- '9'
+cdt_name:
+- cos6
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- clangxx
+- gxx
 cxx_compiler_version:
-- '11'
+- '9'
+docker_image:
+- quay.io/condaforge/linux-anvil-comp7
 fortran_compiler:
 - gfortran
 fortran_compiler_version:
@@ -26,12 +28,8 @@ libgdal:
 - '3.2'
 libnetcdf:
 - 4.7.4
-libuuid:
-- 2.32.1
-macos_machine:
-- x86_64-apple-darwin13.4.0
 numpy:
-- '1.16'
+- '1.19'
 pin_run_as_build:
   hdf4:
     max_pin: x.x
@@ -39,20 +37,20 @@ pin_run_as_build:
     max_pin: x
   libgdal:
     max_pin: x.x
-  libuuid:
-    max_pin: x
   python:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 7.1.1
+- 7.2.0
 python:
-- 3.6.* *_cpython
+- 3.9.* *_cpython
 target_platform:
-- osx-64
+- linux-64
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
   - fortran_compiler_version
+- - cdt_name
+  - docker_image
 - - python
   - numpy
