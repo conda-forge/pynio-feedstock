@@ -5,7 +5,7 @@ c_compiler:
 c_compiler_version:
 - '11'
 channel_sources:
-- conda-forge,defaults
+- conda-forge
 channel_targets:
 - conda-forge main
 cxx_compiler:
@@ -27,7 +27,7 @@ libgdal:
 libnetcdf:
 - 4.8.1
 libuuid:
-- 2.32.1
+- '2'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
@@ -45,7 +45,7 @@ pin_run_as_build:
     min_pin: x.x
     max_pin: x.x
 proj:
-- 8.1.0
+- 8.2.0
 python:
 - 3.9.* *_cpython
 target_platform:
