@@ -19,9 +19,9 @@ fortran_compiler:
 fortran_compiler_version:
 - '10'
 hdf4:
-- '4.2'
+- 4.2.15
 hdf5:
-- 1.10.6
+- 1.12.1
 jasper:
 - '2'
 libgdal:
