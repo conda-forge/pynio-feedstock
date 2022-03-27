@@ -57,7 +57,7 @@ test:
   imports:
     - Nio
   commands:
-    - cd $SRC_DIR/test && pytest  # [not win]
+    - cd $SRC_DIR/test && pytest -k "not test_opendap2"  # [not win]
 
 about:
   home: http://www.pyngl.ucar.edu/Nio.shtml
