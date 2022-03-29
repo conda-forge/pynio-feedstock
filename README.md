@@ -212,6 +212,7 @@ Feedstock Maintainers
 =====================
 
 * [@david-ian-brown](https://github.com/david-ian-brown/)
+* [@fulminemizzega](https://github.com/fulminemizzega/)
 * [@jhamman](https://github.com/jhamman/)
 * [@khallock](https://github.com/khallock/)
 * [@marylhaley](https://github.com/marylhaley/)
