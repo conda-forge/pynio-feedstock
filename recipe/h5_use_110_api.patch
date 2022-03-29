@@ -1,0 +1,21 @@
+diff --git a/setup.py b/setup.py
+index a6daa90..a36aa0a 100644
+--- a/setup.py
++++ b/setup.py
+@@ -237,6 +237,7 @@ try:
+   HAS_HDF5 = int(os.environ["HAS_HDF5"])
+   if HAS_HDF5 > 0:
+     LIB_MACROS.append(('BuildHDF5', None))
++    LIB_MACROS.append(('H5_USE_110_API', None))
+     LIBRARIES.append('hdf5_hl')
+     LIBRARIES.append('hdf5')
+ 
+@@ -357,7 +358,7 @@ except:
+ try:
+   EXTRA_OBJECTS = [os.environ["EXTRA_OBJECTS"]]
+ except:
+-  EXTRA_OBJECTS = ''
++  EXTRA_OBJECTS = []
+ 
+ #
+ # Done with environment variables.
