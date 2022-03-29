@@ -1,0 +1,118 @@
+diff --git a/_xarray.py b/_xarray.py
+index 092183d..50ed0b2 100644
+--- a/_xarray.py
++++ b/_xarray.py
+@@ -178,7 +178,7 @@ def _intp(ar, sltup):
+ 
+     # calculate indices and weights
+     rj = sltup[axis]
+-    j = N.floor(rj).astype(N.int)
++    j = N.floor(rj).astype(int)
+     j = N.clip(j, 0, ar.shape[axis]-2)
+     jp = j+1
+     f0j = rj-j
+@@ -235,7 +235,7 @@ print _rindex(N.arange(10), [2,4.5])
+ 
+     # determine the r-index
+     if ar.shape[0] == 1:
+-        rj = N.zeros((1,ar.shape[1]), dtype=N.int)
++        rj = N.zeros((1,ar.shape[1]), dtype=int)
+     else:
+         if ar[0,0] < ar[1,0]: # ascending order
+             j1 = N.apply_along_axis(N.searchsorted, 0, ar, val).reshape(nv,ni)
+@@ -280,7 +280,7 @@ print _rindex(N.arange(10), [2,4.5])
+             rj = rj.transpose(tr).copy()
+ 
+     if round:
+-        rj = N.round(rj).astype(N.int)
++        rj = N.round(rj).astype(int)
+ 
+     if is_scalar and squeeze:
+         rj_shape = list(rj.shape)
+diff --git a/coordsel.py b/coordsel.py
+index 49b746f..5c5b96e 100755
+--- a/coordsel.py
++++ b/coordsel.py
+@@ -241,9 +241,9 @@ class xSelect(tuple):
+                 start = idx.min()
+                 stop = idx.max()
+             if isinstance(start, float):
+-                start = N.floor(start).astype(N.int)
++                start = N.floor(start).astype(int)
+             if isinstance(stop, float):
+-                stop = N.ceil(stop).astype(N.int)
++                stop = N.ceil(stop).astype(int)
+             if not isinstance(idx, slice):
+                 stop += 1
+             # should be true only for interpolation cases, therefore stop>= 2
+@@ -828,12 +828,12 @@ class axisSelect(object):
+                     if len(crd > 1):
+                         if hasattr(self,'_index_step'):
+                             if idx.step < 0: dir = -1
+-                            idx.step = N.round(idx.step).astype(N.int)
++                            idx.step = N.round(idx.step).astype(int)
+                         else:
+                             # Note this assumes equally spaced coordinate values.
+                             idx.step = cidx.step/(crd[1]-crd[0])
+                             if idx.step < 0: dir = -1
+-                            idx.step = N.round(idx.step).astype(N.int)
++                            idx.step = N.round(idx.step).astype(int)
+                         # step size less than spacing is treated as default step (pos or neg)
+                         if idx.step == 0: 
+                             if dir == 1: 
+@@ -846,12 +846,12 @@ class axisSelect(object):
+                     if data[i] is not None: 
+                         data[i] = _rindex(crd, data[i], axis=axis_no, round=False, clip=clip, ep=ep)
+                         if dir == 1:
+-                            if i == 0: data[i] = N.ceil(data[i]).astype(N.int)
+-                            if i == 1: data[i] = N.floor(data[i]).astype(N.int) + 1
++                            if i == 0: data[i] = N.ceil(data[i]).astype(int)
++                            if i == 1: data[i] = N.floor(data[i]).astype(int) + 1
+                         else:
+-                            if i == 0: data[i] = N.floor(data[i]).astype(N.int)
++                            if i == 0: data[i] = N.floor(data[i]).astype(int)
+                             if i == 1: 
+-                                data[i] = N.ceil(data[i]).astype(N.int) - 1
++                                data[i] = N.ceil(data[i]).astype(int) - 1
+                                 if data[i] == -1: data[i] = None
+             else:
+                 if crd is None: raise ValueError("Missing coordinate variable")
+@@ -867,32 +867,32 @@ class axisSelect(object):
+                             dir = -1
+                         else:
+                             dir = 1
+-                        idx.step = N.round(idx.step).astype(N.int)
++                        idx.step = N.round(idx.step).astype(int)
+                         if idx.step == 0: idx.step = dir
+                         if idx.step < 0:
+                             if data[0] is not None: 
+-                                data[0] = N.floor(data[0]).astype(N.int)
++                                data[0] = N.floor(data[0]).astype(int)
+                                 if data[0] < 0:
+                                     data[0] += dimsize
+                             if data[1] is not None: 
+-                                data[1] = N.ceil(data[1]).astype(N.int)-1
++                                data[1] = N.ceil(data[1]).astype(int)-1
+                                 if data[1] < -1:
+                                     data[1] += dimsize
+                                 elif data[1] == -1:
+                                    data[1] = None
+                     if idx.step is None or idx.step > 0:
+                         if data[0] is not None: 
+-                            data[0] = N.ceil(data[0]).astype(N.int)
++                            data[0] = N.ceil(data[0]).astype(int)
+                             if data[0] < 0:
+                                 data[0] += dimsize
+                         if data[1] is not None: 
+-                            data[1] = N.floor(data[1]).astype(N.int)+1
++                            data[1] = N.floor(data[1]).astype(int)+1
+                             if data[1] < 0:
+                                 data[1] += dimsize
+                 else: 
+                 # not a slice
+                     for i in range(len(data)):
+-                        data[i] = N.round(data[i]).astype(N.int)
++                        data[i] = N.round(data[i]).astype(int)
+                         if data[i] < 0: data[i] += dimsize
+ 
+         if cidx.type == 'scalar' and len(data) == 1: 
