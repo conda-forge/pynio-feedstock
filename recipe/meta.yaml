@@ -12,7 +12,7 @@ source:
     - fix_warning_np.int.patch
 
 build:
-  number: 16
+  number: 17
   skip: True  # [win]
   detect_binary_files_with_prefix: true
 
