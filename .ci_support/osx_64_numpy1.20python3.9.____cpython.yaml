@@ -23,7 +23,7 @@ hdf5:
 jasper:
 - '2'
 libgdal:
-- '3.5'
+- '3.6'
 libnetcdf:
 - 4.8.1
 libuuid:
