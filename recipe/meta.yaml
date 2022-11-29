@@ -28,7 +28,7 @@ requirements:
     - python
     - pip
     - numpy
-    - g2clib 1.6.0
+    - g2clib 1.6.*
     - hdf4
     - hdf5
     - hdfeos2
