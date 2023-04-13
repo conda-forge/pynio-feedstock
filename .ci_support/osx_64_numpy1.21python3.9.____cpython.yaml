@@ -25,13 +25,13 @@ jasper:
 libgdal:
 - '3.6'
 libnetcdf:
-- 4.9.1
+- 4.9.2
 libuuid:
 - '2'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
-- '1.20'
+- '1.21'
 pin_run_as_build:
   python:
     min_pin: x.x
