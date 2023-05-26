@@ -12,7 +12,7 @@ export HAS_HDF4=1
 export HAS_HDF5=1
 export HAS_GDAL=1
 
-export CXXFLAGS="-fPIC ${CXXFLAGS} -fcommon"
+export CXXFLAGS="-fPIC ${CXXFLAGS} -fcommon -Wno-error=uninitialized -Wno-error=maybe-uninitialized"
 export LDFLAGS="-L${PREFIX}/lib ${LDFLAGS}"
 export CPPFLAGS="-I${PREFIX}/include $CPPFLAGS"
 export CFLAGS="-D_BSD_SOURCE -D_XOPEN_SOURCE -I${PREFIX}/include ${CFLAGS} -fcommon"
